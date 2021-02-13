@@ -1,12 +1,23 @@
 {
   "resources": [
+    {"id":{"name":"sChoppergun","path":"sprites/sChoppergun/sChoppergun.yy",},"order":7,},
+    {"id":{"name":"oEnemy","path":"objects/oEnemy/oEnemy.yy",},"order":4,},
+    {"id":{"name":"oEBullet","path":"objects/oEBullet/oEBullet.yy",},"order":3,},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},"order":0,},
+    {"id":{"name":"sEBullet","path":"sprites/sEBullet/sEBullet.yy",},"order":6,},
+    {"id":{"name":"sChopperBlades","path":"sprites/sChopperBlades/sChopperBlades.yy",},"order":5,},
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},"order":3,},
+    {"id":{"name":"sTrooper","path":"sprites/sTrooper/sTrooper.yy",},"order":8,},
+    {"id":{"name":"sChopper","path":"sprites/sChopper/sChopper.yy",},"order":4,},
     {"id":{"name":"sGun","path":"sprites/sGun/sGun.yy",},"order":2,},
+    {"id":{"name":"oChopperblades","path":"objects/oChopperblades/oChopperblades.yy",},"order":6,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":1,},
+    {"id":{"name":"oChopper","path":"objects/oChopper/oChopper.yy",},"order":5,},
+    {"id":{"name":"oTrooper","path":"objects/oTrooper/oTrooper.yy",},"order":8,},
     {"id":{"name":"oBullet","path":"objects/oBullet/oBullet.yy",},"order":2,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":1,},
+    {"id":{"name":"oChoppergun","path":"objects/oChoppergun/oChoppergun.yy",},"order":7,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
