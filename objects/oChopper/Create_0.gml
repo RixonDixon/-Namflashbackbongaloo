@@ -1,14 +1,14 @@
 /// @description Chopper variables and functions
 xspeed = 0;
 yspeed = 0;
-acceleration_ = 10;
+acceleration_ = 2;
 maxSpeed = 10;
 health_ = 100;
 gravity_ = 1;
 seesPlayer = false;
 cTime = 0
 flyX = irandom_range(0,room_width);
-FlyY=irandom_range(0,room_height-64);
+FlyY = irandom_range(0,room_height-64);
 
 
 // Kopierat från Rikhards Player-objekt
@@ -46,7 +46,7 @@ function Shoot(xx,yy){
 
 function FlyTo(xx,yy){
 	var towards = point_direction(x,y,xx,yy);
-	stopdistance = power(sqr(xspeed*xspeed + yspeed*yspeed),2)/acceleration_;
+	stopdistance = (xspeed*xspeed + yspeed*yspeed)/acceleration_;
 	// accelerating
 	if point_distance(x,y,xx,yy)>stopdistance{
 		xspeed+=cos(towards*2*pi/360)*acceleration_
@@ -62,4 +62,8 @@ function FlyTo(xx,yy){
 		yspeed=0;
 		cyclestate()
 	}	
+}
+
+function getHit(){
+	health_ -=5;
 }

@@ -6,7 +6,7 @@ y+=yspeed;
 x+=xspeed;
 y+=sin(cTime/5);
 
-
+if health_ <=0 instance_destroy();
 
 if cTime%60==0{
 	cyclestate();	
