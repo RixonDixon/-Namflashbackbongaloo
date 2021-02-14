@@ -1,4 +1,4 @@
-/// @description Chopper scripts
+/// @description Chopper behavior
 
 cTime+=1;
 
@@ -7,13 +7,14 @@ x+=xspeed;
 y+=sin(cTime/5);
 
 if health_ <=0 instance_destroy();
+image_angle=xspeed*-1;
 
 if cTime%60==0{
 	cyclestate();	
 }
 
 if state == boss.attack1{
-	if cTime%30==0{
+	if cTime%15==0{
 		Shoot(oPlayer.x,oPlayer.y)
 	}
 }

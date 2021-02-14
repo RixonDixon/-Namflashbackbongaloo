@@ -22,7 +22,7 @@ circling,
 attack1
 }
 
-state = boss.attack1;
+state = boss.circling;
 
 function cyclestate(){
 	if state == boss.attack1 {
