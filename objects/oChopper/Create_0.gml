@@ -32,7 +32,7 @@ function cyclestate(){
 	
 	if state == boss.circling{
 		flyX = irandom_range(0,room_width);
-		FlyY=irandom_range(0,room_height-64);
+		FlyY=irandom_range(0,room_height-sprite_height*2);
 	}
 }
 
@@ -53,12 +53,12 @@ function FlyTo(xx,yy){
 		yspeed+=sin(towards*-2*pi/360)*acceleration_
 	}
 	// deaccelerating
-	else if point_distance(x,y,xx,yy)>32{
+	else if point_distance(x,y,xx,yy)>sprite_height{
 		xspeed-=cos(towards*2*pi/360)*acceleration_
 		yspeed-=sin(towards*-2*pi/360)*acceleration_
 	}
 	else {
-		if abs(x-xx)<64 xspeed=0;
+		if abs(x-xx)<sprite_width xspeed=0;
 		yspeed=0;
 		cyclestate()
 	}	
