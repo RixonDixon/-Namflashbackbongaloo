@@ -37,7 +37,7 @@ if place_meeting(x, y+vspeed_, oWall){
 	//jump
 	y += vspeed_
 	
-	
+
 	
 
 	

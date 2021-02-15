@@ -7,8 +7,8 @@ health_ = 100;
 gravity_ = 1;
 seesPlayer = false;
 cTime = 0
-flyX = irandom_range(0,room_width);
-FlyY = irandom_range(0,room_height-64);
+flyX = irandom_range(oPlayer.x-100,oPlayer.x+100);
+FlyY = irandom_range(oPlayer.x-200,oPlayer.x-100);
 
 
 // Kopierat från Rikhards Player-objekt
@@ -28,11 +28,11 @@ function cyclestate(){
 	if state == boss.attack1 {
 	state = boss.circling;
 	}
-	else if state == boss.circling state = boss.attack1;
+	else if state == boss.circling state = choose(boss.attack1);
 	
 	if state == boss.circling{
-		flyX = irandom_range(0,room_width);
-		FlyY=irandom_range(0,room_height-sprite_height*2);
+		flyX = irandom_range(oCamera.x-oCamera.viewidth/2,oCamera.x+oCamera.viewidth/2);
+		FlyY=irandom_range(50+oCamera.y-oCamera.viewheight/2,oCamera.y-100);
 	}
 }
 
