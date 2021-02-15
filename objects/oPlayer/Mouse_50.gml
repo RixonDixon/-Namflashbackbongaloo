@@ -6,5 +6,7 @@ var gun_x = x-4*flipped;
 var x_offset = lengthdir_x(30, dir);
 var y_offset = lengthdir_y(30, dir);
 
-instance_create_layer(gun_x + x_offset,y + y_offset, "Instances", oBullet);
-
+if delay <= 0 {
+	instance_create_layer(gun_x + x_offset,y + y_offset, "Instances", oBullet);
+	delay = 15;
+}

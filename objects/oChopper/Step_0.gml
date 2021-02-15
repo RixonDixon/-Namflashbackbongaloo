@@ -6,7 +6,11 @@ y+=yspeed;
 x+=xspeed;
 y+=sin(cTime/5);
 
-if health_ <=0 instance_destroy();
+if health_ <=0 {
+	instance_destroy();
+	room = rm_win;
+}
+
 image_angle=xspeed*-1;
 
 if cTime%60==0{

@@ -6,6 +6,8 @@ gravity_ = 1;
 acceleration_ = 1;
 friction_ = .3
 jump_height_ = -24;
+health = 100;
+delay = 15;
 
 
 

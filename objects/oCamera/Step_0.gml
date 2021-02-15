@@ -17,3 +17,5 @@ camera_set_view_mat(camera,vm);
 
 layer_x(hillsid, x/2-500);
 layer_x(treesid, x/4);
+
+move_wrap(true, false, sprite_width/2);

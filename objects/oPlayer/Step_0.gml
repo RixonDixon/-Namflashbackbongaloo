@@ -37,8 +37,11 @@ if place_meeting(x, y+vspeed_, oWall){
 	//jump
 	y += vspeed_
 	
+if delay >= 0 delay--;
 
-	
+move_wrap(true, false, sprite_width/2);
+
+if health <= 0 room=rm_lose;
 
 	
 

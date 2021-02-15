@@ -8,7 +8,7 @@ gravity_ = 1;
 seesPlayer = false;
 cTime = 0
 flyX = irandom_range(oPlayer.x-100,oPlayer.x+100);
-FlyY = irandom_range(oPlayer.x-200,oPlayer.x-100);
+FlyY = irandom_range(oPlayer.y-200,oPlayer.y-100);
 
 
 // Kopierat från Rikhards Player-objekt

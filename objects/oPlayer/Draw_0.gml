@@ -13,10 +13,13 @@ if(!place_meeting(x,y+1,oWall)){
 }
 else{
 	if(hspeed_==0){
+		image_speed = 1;
 		draw_sprite_ext(sPlayer, -1,x,y, flipped, 1, 0, image_blend, image_alpha);
 	}
-	else draw_sprite_ext(sPlayerRun, -1,x,y, flipped, 1, 0, image_blend, image_alpha);
-
+	else {
+	draw_sprite_ext(sPlayerRun, -1,x,y, flipped, 1, 0, image_blend, image_alpha);
+	image_speed = 3;
+	}
 }
 
 
