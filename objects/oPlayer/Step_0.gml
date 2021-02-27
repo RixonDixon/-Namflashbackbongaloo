@@ -7,6 +7,28 @@ if hInput != 0 {
 }else {
 	hspeed_ = lerp(hspeed_ , 0, friction_)	
 }
+//Animations
+if health <= 0 {
+	sprite_index=sPlayerDie;
+	if image_index >= image_number -1 {
+		image_speed=0;
+		room=rm_lose;
+		image_index=0;
+	}
+}
+else if(!place_meeting(x,y+1,oWall)){
+	sprite_index=sPlayerJump;
+}
+else{
+	if(hspeed_<=0.5 && hspeed_>=-0.5){
+		image_speed = 1;
+		sprite_index=sPlayer;
+	}
+	else {
+	image_speed = 1;
+	sprite_index=sPlayerRun;
+	}
+}
 
 //collisons
 if !place_meeting(x, y+1, oWall){
@@ -41,7 +63,6 @@ if delay >= 0 delay--;
 
 move_wrap(true, false, sprite_width/2);
 
-if health <= 0 room=rm_lose;
 
 	
 

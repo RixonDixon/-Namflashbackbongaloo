@@ -19,7 +19,18 @@ if cTime%60==0{
 
 if state == boss.attack1{
 	if cTime%15==0{
-		Shoot(oPlayer.x,oPlayer.y)
+		
+		//Attempts at leading - tricky!
+			var Px = oPlayer.x + 
+			point_distance(x,y,oPlayer.x,oPlayer.y)/bulletspeed *
+			oPlayer.hspeed_;
+			
+			var Py = oPlayer.y +
+			point_distance(x,y,oPlayer.x,oPlayer.y)/bulletspeed *
+			oPlayer.vspeed_;
+
+			
+		Shoot(Px,oPlayer.y);
 	}
 }
 

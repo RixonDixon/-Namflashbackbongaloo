@@ -6,6 +6,7 @@ maxSpeed = 10;
 health_ = 100;
 gravity_ = 1;
 seesPlayer = false;
+bulletspeed = 15;
 cTime = 0
 flyX = irandom_range(oPlayer.x-100,oPlayer.x+100);
 FlyY = irandom_range(oPlayer.y-200,oPlayer.y-100);
@@ -41,6 +42,7 @@ function Shoot(xx,yy){
 		var dir = point_direction(x,y,xx,yy);
 		var b = instance_create_layer(oChoppergun.x,oChoppergun.y, "Instances", oEBullet);
 		b.direction=dir;
+		b.speed = bulletspeed;
 	}
 }
 
