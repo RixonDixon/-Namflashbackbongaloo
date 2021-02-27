@@ -11,6 +11,7 @@ if (point_in_rectangle(mousex,mousey,2300,725,2300 + string_width("play"), 725 +
 		
 		if (left_click) {
 			room_goto(rm_game);
+			instance_destroy();
 			}
 		
 		
