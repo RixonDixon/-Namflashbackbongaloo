@@ -16,7 +16,6 @@
     {"id":{"name":"sEBullet","path":"sprites/sEBullet/sEBullet.yy",},"order":6,},
     {"id":{"name":"sChopperBlades","path":"sprites/sChopperBlades/sChopperBlades.yy",},"order":5,},
     {"id":{"name":"sLowclouds","path":"sprites/sLowclouds/sLowclouds.yy",},"order":14,},
-    {"id":{"name":"sPlayerDie","path":"sprites/sPlayerDie/sPlayerDie.yy",},"order":22,},
     {"id":{"name":"sBullet","path":"sprites/sBullet/sBullet.yy",},"order":3,},
     {"id":{"name":"sChopper","path":"sprites/sChopper/sChopper.yy",},"order":12,},
     {"id":{"name":"sChopper_","path":"sprites/sChopper_/sChopper_.yy",},"order":4,},
