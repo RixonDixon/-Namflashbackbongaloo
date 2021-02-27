@@ -10,10 +10,10 @@ if(room==rm_lose){
 		draw_text(
 		room_width/2,200,
 		@"
-		
 
-		
-		>> PRESS ENTER TO RESTART <<"
+
+
+>> PRESS ENTER TO RESTART <<"
 		);
 		draw_set_halign(fa_left);
 }
@@ -28,10 +28,10 @@ if(room==rm_win){
 		draw_text(
 		room_width/2,200,
 		@"
-		
 
-		
-		>> PRESS ENTER TO RESTART <<"
+
+
+>> PRESS ENTER TO RESTART <<"
 		);
 		draw_set_halign(fa_left);
 }

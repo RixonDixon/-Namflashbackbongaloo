@@ -20,21 +20,30 @@ var gun_x = oChoppergun.x*flipped;
 enum boss {
 waiting,
 circling,
-attack1
+attack1,
+dropstoners
 }
 
 state = boss.circling;
 
 function cyclestate(){
-	if state == boss.attack1 {
+	if state == boss.attack1 || state == boss.dropstoners {
 	state = boss.circling;
 	}
-	else if state == boss.circling state = choose(boss.attack1);
+	else if state == boss.circling state = choose(boss.attack1, boss.attack1, boss.dropstoners);
 	
 	if state == boss.circling{
 		flyX = irandom_range(oCamera.x-oCamera.viewidth/2,oCamera.x+oCamera.viewidth/2);
-		FlyY=irandom_range(50+oCamera.y-oCamera.viewheight/2,oCamera.y-100);
+		FlyY = irandom_range(50+oCamera.y-oCamera.viewheight/2,oCamera.y-100);
 	}
+	
+	if state == boss.dropstoners {
+		Spawn();
+	}
+}
+
+function Spawn(){
+	var stoner = instance_create_layer(x, y, "Instances", oStoner);
 }
 
 function Shoot(xx,yy){
@@ -66,6 +75,6 @@ function FlyTo(xx,yy){
 	}	
 }
 
-function getHit(){
+function getHit(xx,yy,dir,spd){
 	health_ -=5;
 }

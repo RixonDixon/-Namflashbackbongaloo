@@ -5,5 +5,5 @@ if(room==rm_game){
 		draw_set_colour(c);
 		draw_set_font(fnt_text);
 		draw_text(oCamera.x-0.45*viewidth,oCamera.y-0.45*viewheight,"HEALTH: "+string(health));
-		
+		draw_text(oCamera.x-0.45*viewidth,oCamera.y-0.40*viewheight,"FPS: "+string(fps_real));
 		}
