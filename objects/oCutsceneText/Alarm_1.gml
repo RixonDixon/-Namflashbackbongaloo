@@ -12,5 +12,6 @@ if (index < string_length(sentence)){
 {
 	{
 	alarm[2] =room_speed * 2;
+	
 	}
 }

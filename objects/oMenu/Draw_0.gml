@@ -10,8 +10,8 @@ if (point_in_rectangle(mousex,mousey,2300,725,2300 + string_width("play"), 725 +
 		draw_set_color(c_orange);
 		
 		if (left_click) {
-			instance_create_depth(0, 0, -9999, oFade);
-			room_goto(rm_cutScene);
+			
+			room_goto(rm_game);
 			instance_destroy();
 			}
 		
