@@ -5,13 +5,15 @@ vspeed_ = 0;
 gravity_ = 0.2;
 acceleration_ = 1;
 friction_ = .3
-jump_height_ = -24;
-health_ = 30;
+jump_height_ = -12;
+health_ = 60;
 bulletspeed = 15;
 cooldown = 60;
 
 function getHit(xx,yy,dir,spd){
 	health_ -=10;
+	hspeed_+=cos(dir*pi/180)*spd/2
+	vspeed_-=sin(dir*pi/180)*spd/2
 	b = instance_create_layer(xx, yy, "Instances", oBlood);
 	b.direction = dir;
 	b.speed = spd;

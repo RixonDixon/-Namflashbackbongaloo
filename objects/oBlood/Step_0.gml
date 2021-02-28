@@ -7,7 +7,7 @@ if !place_meeting(x, y+1, oWall){
 	
 if place_meeting(x+hspeed, y, oWall){
 		
-		while !place_meeting(x+sign(hspeed_), y, oWall) {
+		while !place_meeting(x+sign(hspeed), y, oWall) {
 			x+= sign(hspeed);
 		}
 		hspeed= 0;

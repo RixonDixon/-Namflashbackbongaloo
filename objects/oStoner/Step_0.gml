@@ -2,15 +2,18 @@
 y += vspeed_
 cooldown--;
 if !place_meeting(x, y+1, oWall){
-		vspeed_ += gravity_;	
-		if place_meeting(x, y+vspeed_, oWall){
+	vspeed_ += gravity_;	
+	if place_meeting(x, y+vspeed_, oWall){
 		while !place_meeting(x, y+sign(vspeed_), oWall) {
 			y+= sign(vspeed_);
-		}
-		vspeed_= 0;
+			}
+		}	
 	}
+else{
+	vspeed_= 0;
+	vspeed_ += jump_height_;
 }
-else if abs(oPlayer.x-x) > 0 {
+if abs(oPlayer.x-x) > 16 {
 	var sign_ = sign(oPlayer.x-x);
 	image_xscale = sign_;
 	hspeed_ += sign_*acceleration_;

@@ -2,5 +2,7 @@
 // You can write your code in this editor
 
 // Inherit the parent event
-event_inherited();
+function getHit(xx,yy,dir,spd){
+
+}
 

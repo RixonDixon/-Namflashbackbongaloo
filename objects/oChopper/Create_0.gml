@@ -15,7 +15,7 @@ FlyY = irandom_range(oPlayer.y-200,oPlayer.y-100);
 // Kopierat från Rikhards Player-objekt
 var dir = point_direction(x,y,oPlayer.x,oPlayer.y);
 var flipped = (oPlayer.x >x) * 2-1;
-var gun_x = oChoppergun.x*flipped;
+
 
 enum boss {
 waiting,
@@ -30,7 +30,7 @@ function cyclestate(){
 	if state == boss.attack1 || state == boss.dropstoners {
 	state = boss.circling;
 	}
-	else if state == boss.circling state = choose(boss.attack1, boss.attack1, boss.dropstoners);
+	else if state == boss.circling state = choose(boss.attack1, boss.attack1, boss.circling);
 	
 	if state == boss.circling{
 		flyX = irandom_range(oCamera.x-oCamera.viewidth/2,oCamera.x+oCamera.viewidth/2);
@@ -47,12 +47,10 @@ function Spawn(){
 }
 
 function Shoot(xx,yy){
-	with oChoppergun{
 		var dir = point_direction(x,y,xx,yy);
-		var b = instance_create_layer(oChoppergun.x,oChoppergun.y, "Instances", oEBullet);
+		var b = instance_create_layer(x,y, "Instances", oEBullet);
 		b.direction=dir;
-		b.speed = bulletspeed;
-	}
+		b.speed =bulletspeed;
 }
 
 function FlyTo(xx,yy){
