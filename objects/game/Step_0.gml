@@ -16,9 +16,14 @@ if room == rm_game {
 				var s = instance_create_layer(sx,sy, "Instances", oStoner);
 		}
 	}
-	if time == 2400{
-		var cy = 0;
-		var cx =  irandom_range(0,room_width);
+	if time > 2400 and !chopping{
+		chopping = true;
+		var cy = oCamera.y-oCamera.viewheight/2-128;
+		var cx = irandom_range(oCamera.x-oCamera.viewidth/2,oCamera.x+oCamera.viewidth/2);
 		var c = instance_create_layer(cx,cy, "Instances", oChopper);
 	}
+}
+else {
+	time = 0;
+	chopping = false;
 }

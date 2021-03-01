@@ -13,11 +13,15 @@ if health_ <=0 {
 
 image_angle=xspeed*-1;
 
-if cTime%60==0{
+if cTime%120==0{
 	cyclestate();	
 }
 
 if state == boss.attack1{
+	if xspeed > 0 xspeed--;
+	if xspeed < 0 xspeed++;
+	if yspeed > 0 yspeed--;
+	if yspeed < 0 yspeed++;
 	if cTime%15==0{
 		
 		//Attempts at leading - tricky!

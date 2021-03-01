@@ -1,10 +1,10 @@
 /// @description Variables and functions
 hspeed_ = 0;
-max_hspeed_ = 5;
+max_hspeed_ = 7;
 vspeed_ = 0;
 gravity_ = 1;
-acceleration_ = 1;
-friction_ = .3
+acceleration_ = 0.7;
+friction_ = .1
 jump_height_ = -24;
 health_ = 60;
 cooldown = 0;
